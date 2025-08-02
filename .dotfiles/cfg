@@ -18,7 +18,7 @@
     # Settings
     # If you want to make your own copy of this script on your own domain, set this to your GitHub username
     user=''
-    branch='master'
+    branch='main'
 
     # Should be in home directory anyway, but just in case...
     cd
