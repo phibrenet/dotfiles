@@ -1,0 +1,32 @@
+# Handle line endings automatically for files detected as text
+# and leave all files detected as binary untouched.
+* text=auto
+
+# Force LF line endings for shell scripts
+*.sh text eol=lf
+*.bash text eol=lf
+
+# Force LF line endings for configuration files
+.bashrc text eol=lf
+.bash_profile text eol=lf
+.vimrc text eol=lf
+.tmux.conf text eol=lf
+.inputrc text eol=lf
+.gitconfig text eol=lf
+.gitignore text eol=lf
+
+# Vim files
+*.vim text eol=lf
+*.snippets text eol=lf
+
+# Documentation
+*.md text eol=lf
+*.txt text eol=lf
+
+# Denote all files that are truly binary and should not be modified
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.exe binary

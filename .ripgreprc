@@ -1,0 +1,45 @@
+# Default flags for ripgrep
+# See 'rg --help' for more options
+
+# Always show line numbers
+--line-number
+
+# Search hidden files and directories
+--hidden
+
+# Follow symbolic links
+--follow
+
+# Use smart case (case-insensitive unless uppercase letters are used)
+--smart-case
+
+# Show colors even when outputting to a pipe
+--color=always
+
+# Don't search in git directories
+--glob=!.git/*
+
+# Don't search in node_modules
+--glob=!node_modules/*
+
+# Don't search in common build/cache directories
+--glob=!build/*
+--glob=!dist/*
+--glob=!target/*
+--glob=!.cache/*
+--glob=!.vscode/*
+--glob=!.idea/*
+
+# Don't search in log files by default
+--glob=!*.log
+
+# Don't search in binary files
+--glob=!*.min.js
+--glob=!*.min.css
+--glob=!*.map
+
+# Maximum number of columns to show
+--max-columns=200
+
+# Maximum number of files to search in parallel
+--max-filesize=10M

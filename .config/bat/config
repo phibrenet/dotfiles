@@ -1,0 +1,39 @@
+# Bat configuration file
+# See 'bat --help' for more options
+
+# Set theme (run 'bat --list-themes' to see available themes)
+--theme="Monokai Extended"
+
+# Show line numbers
+--style="numbers,changes,header"
+
+# Use paging if output is longer than screen height
+--paging=auto
+
+# Show file header
+--decorations=always
+
+# Use italic text on the terminal (not supported on all terminals)
+--italic-text=always
+
+# Enable colored output even when not printing to a terminal
+--color=always
+
+# Set tab width to 4 spaces
+--tabs=4
+
+# Wrap long lines
+--wrap=auto
+
+# Show non-printable characters
+--show-all=false
+
+# File extensions and custom mappings
+--map-syntax "*.conf:INI"
+--map-syntax "*.config:INI"
+--map-syntax "*.env:Bash"
+--map-syntax "*.env.*:Bash"
+--map-syntax ".env.*:Bash"
+--map-syntax "Dockerfile*:Dockerfile"
+--map-syntax "docker-compose*.yml:YAML"
+--map-syntax "docker-compose*.yaml:YAML"
