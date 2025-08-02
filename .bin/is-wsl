@@ -1,0 +1,32 @@
+#!/bin/bash
+set -o errexit -o nounset -o pipefail
+
+if [[ ! -f /proc/version ]]; then
+    # Probably macOS
+    exit 1
+fi
+
+if is-docker; then
+    # Could be Docker running on WSL, which is not the same as WSL itself
+    exit 1
+fi
+
+if ! grep -iq 'microsoft' /proc/version; then
+    # Not WSL
+    exit 1
+fi
+
+if [[ -z ${1:-} ]]; then
+    # Any version is fine
+    exit 0
+fi
+
+# Check version
+# https://github.com/microsoft/WSL/issues/4555#issuecomment-647561393
+if grep -q Hyper-V /proc/interrupts; then
+    version=2
+else
+    version=1
+fi
+
+[[ $1 = $version ]]

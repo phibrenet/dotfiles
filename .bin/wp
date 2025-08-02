@@ -1,0 +1,14 @@
+#!/bin/bash
+
+exe=vendor/bin/wp
+if dir="$(findup -f $exe)"; then
+    exec "$dir/$exe" "$@"
+fi
+
+dir=~/.config/composer
+if [ -f "$dir/$exe" ]; then
+    exec "$dir/$exe" "$@"
+fi
+
+echo "Cannot find $exe" >&2
+exit 1
