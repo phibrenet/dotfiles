@@ -65,11 +65,11 @@
         echo 'To set up your own Dotfiles see https://github.com/phibrenet/dotfiles.'
         echo
         while [[ -z $user ]]; do
-            read -p '> [phibre] ' answer || exit 4
+            read -p '> [phibrenet] ' answer || exit 4
 
             # Default
             if [ -z "$answer" ]; then
-                answer="phibre"
+                answer="phibrenet"
             fi
 
             # Make sure it exists

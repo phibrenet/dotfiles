@@ -10,7 +10,8 @@ You can also fork them to make your own copy, which you can customise to your li
 
 ```bash
 cd
-wget phibrenet.org/cfg
+wget https://bit.ly/3UHULGY
+mv 3UHULGY cfg
 . cfg
 ```
 
@@ -47,7 +48,8 @@ Run:
 
 ```bash
 cd
-wget phibrenet.org/cfg
+wget https://bit.ly/3UHULGY
+mv 3UHULGY cfg
 . cfg
 ```
 
@@ -69,7 +71,8 @@ Run "Ubuntu Terminal" from the start menu. Run:
 
 ```bash
 cd
-wget phibrenet.org/cfg
+wget https://bit.ly/3UHULGY
+mv 3UHULGY cfg
 . cfg
 ```
 
@@ -108,6 +111,7 @@ Then install dotfiles as above:
 ```bash
 cd
 wget phibrenet.org/cfg
+mv 3UHULGY cfg
 . cfg
 ```
 
@@ -147,7 +151,8 @@ Then install Dotfiles as normal:
 
 ```bash
 cd
-wget phibrenet.org/cfg
+wget https://bit.ly/3UHULGY
+mv 3UHULGY cfg
 . cfg
 ```
 
