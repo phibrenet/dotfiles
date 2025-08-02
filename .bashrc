@@ -759,6 +759,13 @@ source ~/.bash/ask.sh
 source ~/.bash/color.bash
 source ~/.bash/in_array.bash
 
+# Load modular configurations
+if [[ -d ~/.bash/modules ]]; then
+    for module in ~/.bash/modules/*.bash; do
+        [[ -f "$module" ]] && source "$module"
+    done
+fi
+
 _dirhistory-push-future() {
     if [[ ${#dirhistory_future[@]} -eq 0 || ${dirhistory_future[0]} != "$1" ]]; then
         dirhistory_future=("$1" "${dirhistory_future[@]:0:49}")

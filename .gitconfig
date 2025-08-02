@@ -2,6 +2,12 @@
     ai           = add --interactive
     amend        = !git commit --amend --no-edit --reset-author && echo && git --no-pager status
     ap           = add --patch
+    force-push   = push --force-with-lease
+    fp           = push --force-with-lease
+    safety       = !echo "Git safety aliases:" && echo "  force-push (fp) - safer force push" && echo "  undo-commit - undo last commit keeping changes" && echo "  undo-merge - undo last merge" && echo "  save - quick stash with message"
+    undo-commit  = reset --soft HEAD~1
+    undo-merge   = reset --hard HEAD~1
+    save         = !git add -A && git stash push -m
     b            = branch
     ba           = branch -avv
     bm           = branch --merged
@@ -87,6 +93,7 @@
 
 [core]
     pager = delta-or-less
+    autocrlf = input
 
 [delta]
     features = decorations
@@ -138,6 +145,7 @@
 
 [pull]
     rebase = false
+    ff = only
 
 [push]
     default = upstream
