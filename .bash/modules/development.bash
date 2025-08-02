@@ -22,7 +22,7 @@ proj() {
 # Quick project creation
 mkproj() {
     local name="$1"
-    local project_dir="${PROJECT_DIR:-$HOME/projects}"
+    local project_dir="/home/www"
     
     if [[ -z "$name" ]]; then
         echo "Usage: mkproj <project-name>"
@@ -30,7 +30,8 @@ mkproj() {
     fi
     
     local target="$project_dir/$name"
-    mkdir -p "$target"
+    sudo mkdir -p "$target"
+    sudo chown "$USER:www" "$target"
     cd "$target"
     git init
     
@@ -40,7 +41,10 @@ mkproj() {
     echo ".env" >> .gitignore
     echo "*.log" >> .gitignore
     
-    echo "Created project: $name"
+    # Set group ownership for all created files
+    sudo chown -R "$USER:www" "$target"
+    
+    echo "Created project: $name in $project_dir"
 }
 
 # Development server shortcuts

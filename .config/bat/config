@@ -25,8 +25,8 @@
 # Wrap long lines
 --wrap=auto
 
-# Show non-printable characters
---show-all=false
+# Show non-printable characters (disabled by default)
+#--show-all=false
 
 # File extensions and custom mappings
 --map-syntax "*.conf:INI"
