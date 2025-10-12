@@ -5,10 +5,9 @@ export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
 export BAT_CONFIG_PATH="$HOME/.config/bat/config"
 
 # Modern alternatives to classic commands
-if command -v bat >/dev/null 2>&1; then
-    alias cat='bat'
-elif command -v batcat >/dev/null 2>&1; then
-    alias cat='batcat'
+# Note: cat alias disabled due to issues with sudo cat
+# Use 'bat' or 'batcat' explicitly for syntax highlighting
+if command -v batcat >/dev/null 2>&1 && ! command -v bat >/dev/null 2>&1; then
     alias bat='batcat'
 fi
 
