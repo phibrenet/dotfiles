@@ -48,8 +48,8 @@ Run:
 
 ```bash
 cd
-wget https://bit.ly/3UHULGY
-mv 3UHULGY cfg
+wget https://shorturl.at/v3nXf
+mv v3nXf cfg
 . cfg
 ```
 
